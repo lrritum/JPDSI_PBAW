@@ -21,11 +21,14 @@
 include _ROOT_PATH.'/templates/top.php';
 ?>
 <div id="wrapper">
+    <h2>
 <div style="width:90%; margin: 2em auto;">
-	<a href="<?php print(_APP_ROOT); ?>/app/inna_chroniona.php" class="pure-button">Inny kalkulator</a>
-	<a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button">Wyloguj</a>
+    <a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button">Wyloguj</a>
+	<a style="margin-left:1em;" href="<?php print(_APP_ROOT); ?>/app/inna_chroniona.php" class="pure-button">Inny kalkulator</a>
+	
 </div>
-
+        </h2>
+        
 <div style="width:90%; margin: 2em auto;">
 
 <form action="<?php print(_APP_ROOT); ?>/app/calc.php" method="post" class="pure-form pure-form-stacked">
@@ -45,11 +48,11 @@ include _ROOT_PATH.'/templates/top.php';
 	<input type="submit" value="Oblicz ratę" class="pure-button pure-button-primary" />
         </div>
 </form>	
-<div style ="text-align: center; margin: 2em;">
+<div style ="  align-items: center;margin: 2em;">
 <?php
 if (isset($messages)) {
 	if (count ( $messages ) > 0) {
-		echo '<ol style="margin-top: 1em; padding: 1em 1em 1em 2em; border-radius: 0.5em; background-color: #f88; width:25em; margin:auto">';
+		echo '<ol style="margin-top: 1em; padding: 1em 1em 1em 2em; border-radius: 0.5em; background-color: #ad172d; width:25em; margin:auto">';
 		foreach ( $messages as $key => $msg ) {
 			echo '<li>'.$msg.'</li>';
 		}
@@ -59,7 +62,7 @@ if (isset($messages)) {
 ?>
 
 <?php if (isset($result)){ ?>
-<div style="margin-top: 1em; padding: 1em; border-radius: 2px; color: #fff ;background-color: #0078e7; ">
+<div style="display: inline-block; margin: auto; padding: 1em; border-radius: 2px; color: #fff ;background-color: #0078e7; position: relative;left: 50%;transform: translateX(-50%); ">
 <?php echo 'Kwota miesięcznej raty: '.$result; echo' zł'?>
 </div>
 <?php } ?>
