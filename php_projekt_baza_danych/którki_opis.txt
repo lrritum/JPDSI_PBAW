@@ -1,0 +1,5 @@
+Projekt bazo danowy
+
+Moje założenie projektu polega na stworzeniu uniwersalnego podłoża pod sklep internetowy. 
+
+Baza danych zawiera użytkowników, którzy mogą posiadać różne role ( użytkownik zarejestrowany, administrator). Administrator może np: dodawać produkty w sklepie. W sklepie kazdy produkt ma przypisaną kategorię.
